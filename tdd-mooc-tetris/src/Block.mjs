@@ -2,12 +2,12 @@ export class Block {
   color;
   depth;
 
-  constructor(color) {
+  constructor(color, depth = 0) {
     this.color = color;
-    this.depth = 0;
+    this.depth = depth;
   }
 
   tick() {
-    this.depth += 1;
+    return new Block(this.color, this.depth + 1);
   }
 }

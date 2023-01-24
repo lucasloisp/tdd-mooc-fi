@@ -26,7 +26,7 @@ export class Board {
       this._falling = null;
       this._pieces.push(falling);
     } else {
-      falling.tick();
+      this._falling = falling.tick();
     }
   }
 
